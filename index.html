@@ -21,7 +21,7 @@
         $('#search-hobby').load("web/search-hobby.html");
         $('#open-hobby').load("web/open-hobby.html");
 
-        $('#demo-navbar-collapse a').click(function (e) {
+        $('#demo-navbar-collapse').find('a').click(function (e) {
             e.preventDefault();
             $(this).tab('show');
         })
