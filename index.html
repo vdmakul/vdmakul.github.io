@@ -1,10 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>vdmakul.github.io</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="css/behobby.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 </head>
 <body>
-vdmakul.github.io
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#create-hobby').load("web/create-hobby.html");
+        $('#search-hobby').load("web/search-hobby.html");
+        $('#open-hobby').load("web/open-hobby.html");
+
+        $('#demo-navbar-collapse a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    });
+</script>
+
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">beHobbẎ</a>
+            <!--<small>Сделаем это вместе!</small>-->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="demo-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li role="tab" data-toggle="tab" class=""><a href="#create-hobby">Создание хобби</a></li>
+                <li role="tab" data-toggle="tab" class=""><a href="#search-hobby">Поиск хобби</a></li>
+                <li role="tab" data-toggle="tab" class="active"><a href="#open-hobby">Открыть хобби</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">
+                    <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                    <span class="innertext">Войти</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    <span class="innertext">Регистрация</span>
+                </a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane container" id="create-hobby">
+
+        </div> <!-- create-hobby -->
+        <div role="tabpanel" class="tab-pane container" id="search-hobby">
+
+        </div> <!-- search-hobby -->
+
+        <div role="tabpanel" class="tab-pane container active" id="open-hobby">
+
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">© 2016 beHobby. Все права защищены.</span>
+    </div>
+</footer>
+
+
 </body>
+
+
 </html>
