@@ -22,3 +22,9 @@
 .map-image {
     max-height: 250px;
 }
+
+.button-fluid {
+    width: 100%;
+}
+
+.top-buffer { margin-top:20px; }
