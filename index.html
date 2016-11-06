@@ -23,12 +23,18 @@
         $('#search-hobby').load("web/search-hobby.html");
         $('#open-hobby').load("web/open-hobby.html");
 
+        $('.final-toggle').on('select', new function() {
+            toggle_final_step()
+        }).on('change', new function() {
+            toggle_final_step()
+        });
+        window.setInterval("toggle_final_step()",300);
+
+
         $('#demo-navbar-collapse').find('a').click(function (e) {
             e.preventDefault();
             $(this).tab('show');
         });
-
-        demo_clear_welcome_state();
     });
 </script>
 
