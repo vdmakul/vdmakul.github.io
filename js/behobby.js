@@ -1,3 +1,20 @@
+function demo_init_page() {
+    $('.final-toggle').on('select', new function() {
+        toggle_final_step()
+    }).on('change', new function() {
+        toggle_final_step()
+    });
+
+    window.setInterval("toggle_final_step()",300);
+
+    $('[data-toggle="popover"]').popover();
+
+    $('#demo-navbar-collapse').find('a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+}
+
 function demo_search() {
     $('#showDetailedQuery').toggleClass('collapsed', true);
     $('#detailedSearch').toggleClass('in', false);
@@ -22,6 +39,10 @@ function demo_want_hobby_select() {
 
     $('#want-teach-link img').removeClass('welcome_selected');
     $('#want-hobby-link img').addClass('welcome_selected');
+
+    $('#final-step-div')
+        .attr('data-content', 'Расскажите немного о себе и нажмите для выбора хобби именно для Вас')
+        .popover();
 }
 
 function demo_want_teach_select() {
@@ -34,6 +55,10 @@ function demo_want_teach_select() {
 
     $('#want-hobby-link img').removeClass('welcome_selected');
     $('#want-teach-link img').addClass('welcome_selected');
+
+    $('#final-step-div')
+        .attr('data-content', 'Заполните поля о себе и зарегистрируйте Ваше хобби')
+        .popover();
 }
 
 function demo_run_hobby() {
