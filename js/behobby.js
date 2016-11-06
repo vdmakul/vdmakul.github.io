@@ -12,21 +12,28 @@ function demo_welcome_search() {
 }
 
 function demo_want_hobby_select() {
-    demo_clear_welcome_state();
+    $('#intro-teacher-panel').fadeOut();
+    $('#intro-teacher-link').fadeOut();
+
+    $('#select-personal-panel').fadeIn();
+    $('#select-interests-panel').fadeIn();
+    $('#select-interests-link').fadeIn();
+
+
+    $('#want-teach-link img').removeClass('welcome_selected');
     $('#want-hobby-link img').addClass('welcome_selected');
-    $('.welcome-want-hobby').show();
 }
 
 function demo_want_teach_select() {
-    demo_clear_welcome_state();
-    $('#want-teach-link img').addClass('welcome_selected');
-    $('.welcome-want-teach').show();
-}
+    $('#select-personal-panel').fadeOut();
+    $('#select-interests-panel').fadeOut();
+    $('#select-interests-link').fadeOut();
 
-function demo_clear_welcome_state() {
-    $('.welcome.thumbnail img').removeClass('welcome_selected');
-    $('.welcome-want-hobby').hide();
-    $('.welcome-want-teach').hide();
+    $('#intro-teacher-panel').fadeIn();
+    $('#intro-teacher-link').fadeIn();
+
+    $('#want-hobby-link img').removeClass('welcome_selected');
+    $('#want-teach-link img').addClass('welcome_selected');
 }
 
 function demo_run_hobby() {
