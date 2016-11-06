@@ -1,0 +1,120 @@
+<div class="row">
+    <form role="search">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            Я знаю, чем хочу заниматься
+        </div>
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <input id="welcome-query" type="text" class="form-control" placeholder="интересное дело">
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="input-group">
+                <button type="button" class="btn btn-default button-fluid" onclick="demo_welcome_search()">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Хочу Хобби
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row top-buffer">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <a href="#" class="welcome thumbnail" id="want-hobby-link" onclick="demo_want_hobby_select()">
+            <img src="img/welcome/bored.png">
+        </a>
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <a href="#" class="welcome thumbnail" id="want-teach-link" onclick="demo_want_teach_select()">
+            <img src="img/welcome/introduce.png">
+        </a>
+    </div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="panel panel-default welcome-want-hobby" style="display: none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Что-то из</h3>
+            </div>
+            <div class="panel-body">
+                <select class="form-control">
+                    <option>спокойное</option>
+                    <option>спортивное</option>
+                    <option>творческое</option>
+                    <option>силовое</option>
+                    <option>интеллектуальное</option>
+                </select>
+            </div>
+        </div>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <a href="#" class="welcome thumbnail">
+            <img src="img/welcome/interests.png">
+        </a>
+	</div>
+	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="panel panel-default welcome-want-hobby" style="display: none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Для меня</h3>
+            </div>
+            <div class="panel-body">
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default">
+                        <input type="radio" name="gender" autocomplete="off"> М
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="gender" autocomplete="off"> Ж
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="age" class="col-sm-2 control-label">Возраст</label>
+                    <div class="col-sm-10">
+                        <input type="number" min="14" name="name" id="age" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <a href="#" class="welcome thumbnail">
+            <img src="img/welcome/teacher.png">
+        </a>
+	</div>
+	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="panel panel-default welcome-want-teach" style="display: none;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Обо мне</h3>
+            </div>
+            <div class="panel-body">
+                <div class="btn-group" data-toggle="buttons">
+                <div class="form-group">
+                    <label for="nameSurname" class="col-sm-2 control-label">ФИО</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="nameSurname" id="nameSurname" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+	</div>
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <a href="#" class="welcome thumbnail" onclick="demo_run_hobby()">
+            <img src="img/welcome/handshake.png">
+        </a>
+	</div>
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+	</div>
+</div>

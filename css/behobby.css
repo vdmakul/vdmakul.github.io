@@ -32,3 +32,7 @@
 .no-border {
     border: none !important;
 }
+
+.welcome_selected {
+    background-color: green;
+}

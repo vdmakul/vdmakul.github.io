@@ -18,6 +18,7 @@
 
 <script>
     $(document).ready(function () {
+        $('#welcome').load("web/welcome.html");
         $('#create-hobby').load("web/create-hobby.html");
         $('#search-hobby').load("web/search-hobby.html");
         $('#open-hobby').load("web/open-hobby.html");
@@ -25,7 +26,9 @@
         $('#demo-navbar-collapse').find('a').click(function (e) {
             e.preventDefault();
             $(this).tab('show');
-        })
+        });
+
+        demo_clear_welcome_state();
     });
 </script>
 
@@ -48,9 +51,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="demo-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li role="tab" data-toggle="tab" class=""><a href="#create-hobby">Создание хобби</a></li>
-                <li role="tab" data-toggle="tab" class="active"><a href="#search-hobby">Поиск хобби</a></li>
-                <li role="tab" data-toggle="tab" class=""><a href="#open-hobby">Открыть хобби</a></li>
+                <li role="tab" data-toggle="tab" class="active"><a href="#welcome" onclick="demo_clear_welcome_state()">Welcome</a></li>
+                <li role="tab" data-toggle="tab" class=""><a href="#create-hobby" id="create-hobby-link">Создание хобби</a></li>
+                <li role="tab" data-toggle="tab" class=""><a href="#search-hobby" id="search-hobby-link">Поиск хобби</a></li>
+                <li role="tab" data-toggle="tab" class=""><a href="#open-hobby" id="open-hobby-link">Открыть хобби</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -69,10 +73,13 @@
 
 <div class="container">
     <div class="tab-content">
+        <div role="tabpanel" class="tab-pane container active" id="welcome">
+
+        </div>
         <div role="tabpanel" class="tab-pane container" id="create-hobby">
 
         </div> <!-- create-hobby -->
-        <div role="tabpanel" class="tab-pane container active" id="search-hobby">
+        <div role="tabpanel" class="tab-pane container" id="search-hobby">
 
         </div> <!-- search-hobby -->
 
