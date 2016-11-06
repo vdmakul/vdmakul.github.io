@@ -78,6 +78,28 @@ function demo_open_search_with_results() {
     $('#search-hobby-link').click();
 }
 
+function demo_home() {
+    $('#want-hobby-link img').removeClass('welcome_selected');
+    $('#want-teach-link img').removeClass('welcome_selected');
+
+    $('#intro-teacher-panel').hide();
+    $('#select-personal-panel').hide();
+    $('#select-interests-panel').hide();
+
+    $('#selected-interests').find('span.badge').remove();
+    $('#select-personal-panel').find('input[name=gender]:checked').attr('checked', false).prop('checked', false);
+    $('#select-personal-panel').find('input[name=gender]').closest('label').removeClass('active');
+    $('#select-personal-panel').find('input[name=age]').val("");
+
+    $('#intro-teacher-panel').find('input[name=nameSurname]').val("");
+    $('#intro-teacher-panel').find('input[name=email]').val("");
+
+    $('#intro-teacher-link').show();
+    $('#select-interests-link').show();
+
+    $('#welcome-page-link').click();
+}
+
 function demo_open_hobby() {
     $('#open-hobby-link').click();
 }
